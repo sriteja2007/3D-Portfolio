@@ -1,6 +1,7 @@
 // src/components/ExperienceSection.tsx
 import React, { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
+import { GraduationCap, Code, Brain, Compass } from 'lucide-react';
 
 interface RouteStop {
   id: string;
@@ -8,43 +9,45 @@ interface RouteStop {
   title: string;
   organization: string;
   description: string;
+  icon: React.ReactNode;
 }
 
 const journey: RouteStop[] = [
   {
     id: '01',
-    year: 'MAY - JUN 2026',
-    title: 'FULL STACK & MOBILE INTERN',
-    organization: 'TECHNICAL HUB PVT LTD',
-    description: 'Engineered cross-platform mobile and responsive web applications utilizing React Native and modern full-stack workflows.',
+    year: '2024 - 2028 (PRESENT)',
+    title: 'B.TECH IN COMPUTER SCIENCE & ENGINEERING (AIML)',
+    organization: 'MVGR COLLEGE OF ENGINEERING, VIZIANAGARAM',
+    description:
+      'Currently in 3rd Year with an 8.3 / 10 CGPA. Rigorous academic focus on Machine Learning, Deep Learning, Computer Vision, Data Structures & Algorithms (DSA), and Database Management Systems (DBMS).',
+    icon: <GraduationCap className="w-4 h-4 text-[#D4AF37]" />,
   },
   {
     id: '02',
-    year: '2026 MILESTONE',
-    title: 'TOP 100 NATIONAL TEAM',
-    organization: 'MYNTRA WEFORSHE HACKERRAMP',
-    description: 'Ranked among the Top 100 nationwide teams while maintaining Department Topper status (9.07 CGPA) in Data Science.',
+    year: '2025 - PRESENT',
+    title: 'APPLIED AI & FULL-STACK PRODUCT INITIATIVES',
+    organization: 'INDEPENDENT ENGINEERING & OPEN SOURCE',
+    description:
+      'Engineering real-world AI applications including CampusRecover AI (Gemini multimodal lost-and-found system), PlacementOS-Ai (AI career copilot with mock interviews), and Virtual Mouse (MediaPipe computer vision gesture interface).',
+    icon: <Brain className="w-4 h-4 text-[#D4AF37]" />,
   },
   {
     id: '03',
-    year: 'MAY - JUN 2025',
-    title: 'FULL STACK TRAINEE',
-    organization: 'TECHNICAL HUB PVT LTD',
-    description: 'Trained in modern full-stack architecture, developing and deploying end-to-end interactive responsive web platforms.',
+    year: '2024 - 2025',
+    title: 'ALGORITHMIC FOUNDATIONS & MULTI-PARADIGM CODING',
+    organization: 'CORE CS & ALGORITHMIC RIGOR',
+    description:
+      'Mastering software fundamentals across C, C++, Java, and Python. Comprehensive practice in Object-Oriented Programming (OOP), Data Structures, Schema Design, and RESTful client-server architectures.',
+    icon: <Code className="w-4 h-4 text-[#D4AF37]" />,
   },
   {
     id: '04',
-    year: '2023 - 2027',
-    title: 'B.TECH IN DATA SCIENCE',
-    organization: 'ADITYA COLLEGE OF ENGINEERING',
-    description: 'Specializing in Machine Learning and System Design. Solved 1200+ algorithm challenges across LeetCode, CodeChef, and GeeksforGeeks.',
-  },
-  {
-    id: '05',
-    year: '2021 - 2023',
-    title: 'HIGHER SECONDARY (MPC)',
-    organization: 'SRI CHAITANYA JUNIOR COLLEGE',
-    description: 'Completed specialized coursework in Mathematics, Physics, and Chemistry with 90.60% aggregate excellence.',
+    year: '2022 - 2024',
+    title: 'HIGHER SECONDARY EDUCATION (MPC)',
+    organization: 'BOARD OF INTERMEDIATE EDUCATION, ANDHRA PRADESH',
+    description:
+      'Completed specialized coursework in Mathematics, Physics, and Chemistry, establishing strong mathematical reasoning, calculus, and linear algebra foundations critical for Machine Learning.',
+    icon: <Compass className="w-4 h-4 text-[#D4AF37]" />,
   },
 ];
 
@@ -81,7 +84,7 @@ export const ExperienceSection: React.FC = () => {
             className="text-[11px] font-medium tracking-[0.35em] uppercase text-[#D4AF37]"
             style={{ fontFamily: "'Montserrat', sans-serif" }}
           >
-            04 / EXPERIENCE
+            04 / EDUCATION &amp; JOURNEY
           </span>
           <div className="w-20 h-[1px] bg-gradient-to-r from-[#D4AF37]/80 via-[#8C6D4F]/40 to-transparent" />
         </motion.div>
@@ -99,24 +102,24 @@ export const ExperienceSection: React.FC = () => {
             style={{ fontFamily: "'Bebas Neue', sans-serif" }}
           >
             <span className="block text-transparent bg-clip-text bg-gradient-to-b from-[#FFFFFF] via-[#D5CBC0] to-[#605448] drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)]">
-              EXPERIENCE &amp;
+              ACADEMIC &amp;
             </span>
             <span className="block text-transparent bg-clip-text bg-gradient-to-b from-[#F7E7C4] via-[#C99E5D] to-[#543B1A] drop-shadow-[0_8px_25px_rgba(201,158,93,0.35)]">
-              MILESTONES.
+              DEVELOPMENT JOURNEY.
             </span>
           </h2>
         </motion.div>
 
-        {/* Minimalist Route Map */}
+        {/* Route Map */}
         <div className="relative w-full">
           
           {/* Background Track */}
-          <div className="absolute left-[19px] md:left-[140px] top-4 bottom-8 w-[1px] bg-[#8C6D4F]/20" />
+          <div className="absolute left-[19px] md:left-[160px] top-4 bottom-8 w-[1px] bg-[#8C6D4F]/20" />
           
           {/* Animated Gold Track */}
           <motion.div
             style={{ height: lineHeight }}
-            className="absolute left-[19px] md:left-[140px] top-4 w-[2px] bg-gradient-to-b from-[#D4AF37] via-[#C99E5D] to-[#8C6D4F]/10 shadow-[0_0_10px_#D4AF37] origin-top"
+            className="absolute left-[19px] md:left-[160px] top-4 w-[2px] bg-gradient-to-b from-[#D4AF37] via-[#C99E5D] to-[#8C6D4F]/10 shadow-[0_0_10px_#D4AF37] origin-top"
           />
 
           <div className="space-y-12">
@@ -130,14 +133,14 @@ export const ExperienceSection: React.FC = () => {
                 className="relative flex flex-col md:flex-row items-start group"
               >
                 {/* Desktop Year (Left side of track) */}
-                <div className="hidden md:block w-[140px] shrink-0 pr-8 pt-0.5 text-right">
+                <div className="hidden md:block w-[160px] shrink-0 pr-8 pt-0.5 text-right">
                   <span className="text-[10px] font-mono tracking-[0.2em] text-[#8C6D4F] group-hover:text-[#D4AF37] transition-colors">
                     {stop.year}
                   </span>
                 </div>
 
                 {/* Route Node */}
-                <div className="absolute left-[19px] md:left-[140px] top-1.5 -translate-x-1/2 flex items-center justify-center">
+                <div className="absolute left-[19px] md:left-[160px] top-1.5 -translate-x-1/2 flex items-center justify-center">
                   <div className="absolute w-6 h-6 rounded-full border border-[#D4AF37]/0 group-hover:border-[#D4AF37]/40 group-hover:scale-150 transition-all duration-700 ease-out" />
                   <div className="w-2.5 h-2.5 rounded-full bg-[#120F0C] border border-[#8C6D4F] group-hover:bg-[#D4AF37] group-hover:border-[#D4AF37] group-hover:shadow-[0_0_12px_#D4AF37] transition-colors duration-300" />
                 </div>
@@ -152,21 +155,21 @@ export const ExperienceSection: React.FC = () => {
                   </div>
 
                   <h3
-                    className="text-3xl sm:text-4xl tracking-wide text-white group-hover:text-[#F7E7C4] transition-colors mb-1 leading-none"
+                    className="text-3xl sm:text-4xl tracking-wide text-white group-hover:text-[#F7E7C4] transition-colors mb-1 leading-none uppercase"
                     style={{ fontFamily: "'Bebas Neue', sans-serif" }}
                   >
                     {stop.title}
                   </h3>
                   
                   <span 
-                    className="block text-[10px] font-medium tracking-[0.2em] uppercase text-[#8C6D4F] mb-2"
+                    className="block text-[10.5px] font-medium tracking-[0.2em] uppercase text-[#D4AF37] mb-2"
                     style={{ fontFamily: "'Montserrat', sans-serif" }}
                   >
                     {stop.organization}
                   </span>
                   
                   <p 
-                    className="text-xs sm:text-[13px] font-light text-[#A8988B] leading-[1.7] max-w-lg group-hover:text-[#D5CBC0] transition-colors"
+                    className="text-xs sm:text-[13px] font-light text-[#A8988B] leading-[1.75] max-w-xl group-hover:text-[#D5CBC0] transition-colors"
                     style={{ fontFamily: "'Montserrat', sans-serif" }}
                   >
                     {stop.description}

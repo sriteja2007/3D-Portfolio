@@ -212,6 +212,7 @@ const ScrollStack: React.FC<ScrollStackProps> = ({
     };
     animationFrameRef.current = requestAnimationFrame(raf);
 
+    (window as any).lenis = lenis;
     lenisRef.current = lenis;
     return lenis;
   }, [handleScroll]);
@@ -251,6 +252,7 @@ const ScrollStack: React.FC<ScrollStackProps> = ({
       if (lenisRef.current) {
         lenisRef.current.destroy();
       }
+      (window as any).lenis = null;
       stackCompletedRef.current = false;
       cardsRef.current = [];
       initialTopsRef.current = [];

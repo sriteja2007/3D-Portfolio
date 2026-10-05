@@ -4,36 +4,59 @@ import type { Variants } from 'framer-motion';
 
 const bentoCategories = [
   {
-    title: 'FRONTEND ARCHITECTURE',
-    badge: 'CORE PILLAR',
-    items: ['React.js', 'React Native', 'Tailwind CSS', 'Electron.js'],
-    description: 'Specialized in building high-performance client applications, custom component libraries, and immersive desktop/mobile interfaces.',
-    stat: '100% RESPONSIVE',
+    title: 'AI, MACHINE LEARNING & COMPUTER VISION',
+    badge: 'CORE SPECIALIZATION',
+    items: [
+      'TensorFlow',
+      'PyTorch',
+      'Keras',
+      'MediaPipe',
+      'Scikit-learn',
+      'Computer Vision',
+      'Generative AI',
+      'Google Gemini APIs',
+      'NLTK',
+    ],
+    description:
+      'Architecting intelligent pipelines: 3D hand landmark recognition with MediaPipe, automated ATS resume intelligence, multimodal Gemini integrations, and deep predictive neural networks.',
+    stat: 'CORE SPECIALIZATION',
     colSpan: 'lg:col-span-7',
   },
   {
-    title: 'DISTRIBUTED BACKEND',
-    badge: 'HIGH CONCURRENCY',
-    items: ['Node.js', 'Express.js', 'Spring Boot', 'Docker', 'Redis'],
-    description: 'Engineered RESTful APIs, JWT role-based access control, caching layers, and multi-tenant SaaS backend isolation.',
-    stat: '< 40ms LATENCY',
+    title: 'FULL STACK & WEB ARCHITECTURE',
+    badge: 'END-TO-END',
+    items: ['React.js', 'Node.js', 'Express.js', 'JavaScript', 'HTML5', 'CSS3', 'REST APIs', 'Tailwind CSS'],
+    description:
+      'Engineering high-performance client applications, custom component libraries, and robust Node/Express RESTful APIs connected to scalable databases.',
+    stat: 'MODERN STACK',
     colSpan: 'lg:col-span-5',
   },
   {
-    title: 'DATA PLATFORMS',
-    badge: 'PERSISTENCE',
-    items: ['MongoDB Atlas', 'PostgreSQL', 'MySQL'],
-    description: 'Designing resilient relational and document schemas with optimized indexing and transaction isolation.',
-    stat: 'ACID & NOSQL',
+    title: 'DATABASES & DATA SCIENCE',
+    badge: 'PERSISTENCE & ANALYTICS',
+    items: ['MongoDB', 'Firebase', 'SQL', 'DBMS', 'Pandas', 'NumPy', 'Matplotlib'],
+    description:
+      'Designing relational and NoSQL document schemas, executing vector search, exploratory data analysis, and multi-dimensional numerical processing.',
+    stat: 'DATA PIPELINES',
     colSpan: 'lg:col-span-5',
   },
   {
-    title: 'ALGORITHMS & MACHINE LEARNING',
-    badge: 'INTELLIGENCE',
-    items: ['C++', 'Python', 'Java', 'scikit-learn', 'OpenAI API'],
-    description: '1200+ algorithm problems solved. Applied Random Forest classifiers for real-time risk heatmaps and NLP policy analyzers.',
-    stat: '1200+ SOLVED',
+    title: 'PROGRAMMING & ALGORITHMIC FOUNDATIONS',
+    badge: 'SYSTEMS & LOGIC',
+    items: ['Python', 'Java', 'C++', 'C', 'DSA (Data Structures)', 'OOP (Object-Oriented)'],
+    description:
+      'Rigorous algorithmic problem solving in C, C++, Java, and Python with comprehensive understanding of Data Structures, OOP design principles, and computational complexity.',
+    stat: 'ALGORITHMIC CORE',
     colSpan: 'lg:col-span-7',
+  },
+  {
+    title: 'DEVELOPMENT TOOLS & WORKFLOWS',
+    badge: 'PRODUCTION TOOLING',
+    items: ['Git', 'GitHub', 'VS Code', 'Vercel', 'Jupyter Notebook', 'Postman', 'Supabase'],
+    description:
+      'End-to-end developer workflows: version control, team pull requests, cloud deployments via Vercel, API verification, and interactive machine learning experimentation.',
+    stat: 'DEPLOYMENT READY',
+    colSpan: 'lg:col-span-12',
   },
 ];
 
@@ -67,7 +90,7 @@ export const SkillsSection: React.FC = () => {
   return (
     <section
       id="skills"
-      className="relative w-screen bg-black text-[#E8DFD8] font-sans selection:bg-[#cbb59d] selection:text-black pt-8 pb-24 px-6 sm:px-12 lg:px-20 overflow-hidden flex flex-col justify-center"
+      className="relative w-full max-w-full bg-black text-[#E8DFD8] font-sans selection:bg-[#cbb59d] selection:text-black pt-8 pb-24 px-6 sm:px-12 lg:px-20 overflow-hidden flex flex-col justify-center"
     >
       {/* Ambient Glows */}
       <div className="absolute top-1/3 left-1/4 w-[34rem] h-[34rem] bg-[#D4AF37]/5 rounded-full blur-[170px] pointer-events-none" />
@@ -105,10 +128,10 @@ export const SkillsSection: React.FC = () => {
             style={{ fontFamily: "'Bebas Neue', sans-serif" }}
           >
             <span className="block text-transparent bg-clip-text bg-gradient-to-b from-[#FFFFFF] via-[#D5CBC0] to-[#605448] drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)]">
-              ARCHITECTURAL MASTERY.
+              ENGINEERING TOOLKIT.
             </span>
             <span className="block text-transparent bg-clip-text bg-gradient-to-b from-[#F7E7C4] via-[#C99E5D] to-[#543B1A] drop-shadow-[0_8px_25px_rgba(201,158,93,0.35)]">
-              PRECISION APPLIED.
+              APPLIED EXPERTISE.
             </span>
           </h2>
         </motion.div>
